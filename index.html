@@ -17,7 +17,6 @@
             overflow-x: hidden;
         }
 
-        /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
@@ -26,16 +25,42 @@
         .hero-section {
             height: 100vh;
             background: #5d2c2c;
-            display: flex;
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: url('./ASSETS/hero.png') no-repeat center right;
+            /* background-size: cover; */
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, #5d2c2c 0%, #5d2c2c 40%, rgba(93, 44, 44, 0.7) 70%, rgba(93, 44, 44, 0.3) 100%);
+            z-index: 2;
         }
 
         .hero-content {
-            flex: 1;
+            position: relative;
+            z-index: 3;
             padding: 80px 60px;
             color: white;
-            z-index: 2;
+            max-width: 50%;
             opacity: 0;
             transform: translateX(-50px);
             animation: slideInLeft 1.2s ease-out 0.3s forwards;
@@ -69,27 +94,6 @@
             animation-delay: 1.2s;
         }
 
-        .hero-image {
-            flex: 1;
-            background: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Budaya%20Batak%20Toba-6XIqfoH10CeLlTTEuBLi40r9zstCIo.png') no-repeat center;
-            background-size: cover;
-            position: relative;
-            opacity: 0;
-            transform: scale(1.1);
-            animation: zoomIn 1.5s ease-out 0.5s forwards;
-        }
-
-        .hero-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to right, #5d2c2c 0%, rgba(93, 44, 44, 0.7) 30%, rgba(93, 44, 44, 0.3) 100%);
-        }
-
-        /* Floating particles */
         .particles {
             position: absolute;
             top: 0;
@@ -109,10 +113,10 @@
             animation: float 6s infinite linear;
         }
 
-        /* Content Section */
+        /* FIXED Content Section - Now with white background and maroon container */
         .content-section {
             background: white;
-            padding: 0;
+            padding: 80px 60px;
             opacity: 0;
             transform: translateY(50px);
             transition: all 0.8s ease-out;
@@ -123,48 +127,50 @@
             transform: translateY(0);
         }
 
-        .section-header {
+        /* Maroon container that holds both title card and content */
+        .content-container {
             background: #5d2c2c;
-            color: white;
-            padding: 20px 60px;
+            border-radius: 20px;
+            padding: 60px;
             position: relative;
-            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
-        .section-header::before {
-            content: '';
+        /* White floating title card on the left */
+        .section-title-card {
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.8s ease-out;
-        }
-
-        .section-header.animate::before {
-            left: 100%;
-        }
-
-        .section-header h2 {
-            font-size: 32px;
-            font-weight: normal;
-            position: relative;
+            left: 60px;
+            top: 60px;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            width: 280px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             z-index: 2;
         }
 
+        .section-title-card h2 {
+            font-size: 36px;
+            font-weight: normal;
+            color: #333;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        /* Content text that flows around the card */
         .content-text {
-            padding: 40px 60px;
-            columns: 2;
-            column-gap: 40px;
-            text-align: justify;
+            color: white;
+            font-size: 16px;
             line-height: 1.8;
-            font-size: 14px;
+            text-align: justify;
+            margin-left: 360px; /* Space for the floating card */
+            padding-top: 0;
         }
 
         .content-text p {
-            margin-bottom: 20px;
-            break-inside: avoid;
+            margin-bottom: 25px;
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.6s ease-out;
@@ -251,7 +257,6 @@
             right: 20px;
         }
 
-        /* Gallery indicators */
         .gallery-indicators {
             display: flex;
             justify-content: center;
@@ -345,7 +350,6 @@
             color: #333;
         }
 
-        /* Scroll progress bar */
         .scroll-progress {
             position: fixed;
             top: 0;
@@ -369,13 +373,6 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
-            }
-        }
-
-        @keyframes zoomIn {
-            to {
-                opacity: 1;
-                transform: scale(1);
             }
         }
 
@@ -403,12 +400,13 @@
 
         /* Responsive Design */
         @media (max-width: 1024px) {
-            .hero-section {
-                flex-direction: column;
-                height: auto;
+            .hero-section::before {
+                width: 100%;
+                opacity: 0.4;
             }
 
             .hero-content {
+                max-width: 80%;
                 padding: 40px 30px;
             }
 
@@ -416,17 +414,23 @@
                 font-size: 36px;
             }
 
-            .hero-image {
-                height: 50vh;
+            .content-section {
+                padding: 40px 30px;
+            }
+
+            .content-container {
+                padding: 40px 30px;
+            }
+
+            .section-title-card {
+                position: static;
+                width: 100%;
+                margin-bottom: 30px;
+                padding: 30px 20px;
             }
 
             .content-text {
-                columns: 1;
-                padding: 30px;
-            }
-
-            .section-header {
-                padding: 20px 30px;
+                margin-left: 0;
             }
 
             .gallery-section {
@@ -445,6 +449,7 @@
 
         @media (max-width: 768px) {
             .hero-content {
+                max-width: 100%;
                 padding: 30px 20px;
             }
 
@@ -456,17 +461,21 @@
                 font-size: 14px;
             }
 
-            .section-header {
-                padding: 15px 20px;
+            .content-section {
+                padding: 30px 20px;
             }
 
-            .section-header h2 {
-                font-size: 24px;
+            .content-container {
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+
+            .section-title-card h2 {
+                font-size: 28px;
             }
 
             .content-text {
-                padding: 20px;
-                font-size: 13px;
+                font-size: 14px;
             }
 
             .gallery-section {
@@ -486,11 +495,9 @@
     </style>
 </head>
 <body>
-    <!-- Scroll progress bar -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
     <section class="hero-section">
-        <!-- Floating particles -->
         <div class="particles" id="particles"></div>
         
         <div class="hero-content">
@@ -498,29 +505,36 @@
             <p>Budaya Batak Toba adalah bagian penting dari warisan budaya Indonesia. Budaya ini mencakup berbagai aspek kehidupan seperti sistem kekerabatan, adat istiadat, musik, tarian, dan berbagai tradisi yang masih dipertahankan hingga saat ini.</p>
             <p>Dari filosofi hidup Dalihan Na Tolu, teknologi unik, hingga musik gondang dan seni tarian tortor, setiap elemen budaya Batak Toba sarat akan makna dan dipenuhi nilai-nilai luhur warisan nenek moyang.</p>
         </div>
-        <div class="hero-image"></div>
     </section>
 
     <section class="content-section" id="contentSection">
-        <div class="section-header" id="sectionHeader">
-            <h2>Sejarah dan Asal Usul Batak Toba</h2>
-        </div>
-        <div class="content-text" id="contentText">
-            <p>Suku Batak Toba merupakan salah satu sub suku dalam dari kelompok etnis Batak yang mendiami wilayah Sumatera Utara, Indonesia. Mereka dikenal dengan sistem kekerabatan patrilineal yang kuat dan tinggal di sekitar Danau Toba, terutama di daerah seperti Balige, Laguboti, Muara, hingga Pulau Samosir. Masyarakat Batak Toba memiliki budaya yang kaya dan unik, dengan sistem sosial yang telah mengakar dalam kehidupan sehari-hari mereka selama berabad-abad.</p>
+        <!-- Maroon container with white background around it -->
+        <div class="content-container">
+            <!-- White floating title card -->
+            <div class="section-title-card">
+                <h2>Sejarah dan Asal Usul Batak Toba</h2>
+            </div>
+            
+            <!-- Content text that flows around the card -->
+            <div class="content-text" id="contentText">
+                <p>Suku Batak Toba merupakan salah satu sub-suku utama dari kelompok etnis Batak yang mendiami wilayah tengah Sumatera Utara, terutama di sekitar Danau Toba dan daerah sekitarnya seperti Balige, Laguboti, Muara, hingga Pulau Samosir. Masyarakat Batak Toba memiliki budaya yang kuat dan khas, dengan sistem marga, adat istiadat, bahasa, serta kepercayaan yang diwariskan secara turun-temurun.</p>
 
-            <p>Menurut kepercayaan dan tradisi lisan masyarakat Batak, leluhur orang Batak dianggap berasal dari daerah yang sekarang dikenal sebagai Pusuk Buhit di tepi Danau Toba. Menurut legenda Batak Toba, nenek moyang mereka adalah Si Raja Batak yang dipercaya sebagai leluhur pertama. Dari Pusuk Buhit inilah kemudian keturunan Batak menyebar ke berbagai wilayah di Sumatera Utara, membentuk berbagai sub-suku Batak yang kita kenal saat ini, termasuk Batak Toba, Batak Karo, Batak Pakpak, Batak Simalungun, Batak Angkola, dan Batak Mandailing.</p>
+                <p>Menurut kepercayaan dan tradisi lisan masyarakat Batak, leluhur orang Batak dikenal dengan nama Si Raja Batak. Ia dipercaya berasal dari daerah Pusuk Buhit, sebuah gunung sakral di Pulau Samosir, yang dianggap sebagai tempat pertama kali kehidupan masyarakat Batak bermula. Dari Si Raja Batak inilah lahir dua keturunan utama: Guru Tatea Bulan, yang tetap tinggal di Pusuk Buhit dan menjadi nenek moyang Batak Toba, dan Raja Isumbaon, yang menyebar ke wilayah selatan dan menjadi leluhur sub-suku lainnya seperti Mandailing, Angkola, dan Pakpak.</p>
 
-            <p>Dari sisi sejarah Guru Batak Bukan sekedar nenek moyang Batak Batak Toba seperti Sisingamangaraja, Simarimbun, Hutauruk, Nababan, Sinaga, dan banyak lainnya hingga mereka menjadi bagian penting dalam sejarah Indonesia. Batak Toba juga sangat memperhatikan dalam sistem kekerabatan dan sosial dalam masyarakat Batak. Batak dan sangat memperhatikan dalam sistem kekerabatan dan sosial dalam masyarakat Batak. Batak dan sangat memperhatikan dalam sistem kekerabatan dan sosial dalam masyarakat Batak.</p>
+                <p>Dari keturunan Guru Tatea Bulan, lahirlah marga-marga besar Batak Toba seperti Situmorang, Simanjuntak, Manurung, Nababan, Siregar, dan banyak lainnya. Marga menjadi penanda identitas utama dalam masyarakat Batak Toba dan sangat menentukan dalam sistem kekerabatan dan tata kehidupan sosial, termasuk dalam upacara adat dan pernikahan. Masyarakat Batak Toba menganut sistem patrilineal, yaitu garis keturunan diturunkan dari pihak ayah, dan setiap individu harus mengetahui marga serta posisi sosialnya dalam struktur adat.</p>
 
-            <p>Perkembangan budaya Batak Toba tidak lepas dari pengaruh sejarah, termasuk kedua agama Kristen maupun Islam, sehingga Toba pun dapat tetap mempertahankan identitas budaya mereka. Namun demikian, Di bidang lainnya, masyarakat menjalankan tradisi penting dalam penyebaran agama Kristen Protestan dan menjadi salah satu kelompok etnis Kristen terbesar di Indonesia. Hal ini tidak mengurangi kekayaan budaya mereka, justru memperkaya dengan nilai-nilai spiritual yang baru, sehingga tercipta harmoni antara tradisi dan modernitas dalam kehidupan sehari-hari masyarakat Batak Toba.</p>
+                <p>Perkembangan budaya Batak Toba tidak lepas dari pengaruh sejarah, terutama ketika agama Kristen masuk ke wilayah Toba pada abad ke-19. Seorang misionaris Jerman bernama Dr. Ludwig Ingwer Nommensen menjadi tokoh penting dalam penyebaran agama Kristen Protestan dan mendirikan gereja HKBP (Huria Kristen Batak Protestan) yang hingga kini menjadi gereja terbesar di Tanah Batak. Meskipun nilai-nilai keagamaan baru mulai diadopsi, adat Batak Toba tetap hidup berdampingan dan mengalami penyesuaian, bukan penghapusan.</p>
 
-            <p>Hingga hari ini masalah modernisasi dan globalisasi telah banyak mengubah gaya hidup masyarakat Batak Toba, namun mereka tetap berusaha mempertahankan budaya leluhur. Hal ini terlihat dari masih berjalannya berbagai tradisi seperti upacara adat, musik gondang, tarian tortor, dan sistem kekerabatan Dalihan Na Tolu yang masih dipraktikkan dalam kehidupan sehari-hari mereka. Generasi muda Batak Toba juga semakin sadar akan pentingnya melestarikan budaya leluhur dan berusaha untuk terus menjaga dan mengembangkan warisan budaya yang telah diwariskan oleh nenek moyang mereka.</p>
+                <p>Hingga hari ini, meskipun modernisasi dan globalisasi terus berlangsung, masyarakat Batak Toba masih mempertahankan nilai-nilai budaya leluhur. Berbagai upacara adat seperti mangokkal holi (pemindahan tulang leluhur), saur matua (upacara kematian orang tua yang lengkap keturunannya), serta martumpol dan ulaon unjuk (proses pernikahan adat) masih dijalankan dengan penuh penghormatan. Budaya Batak Toba bahkan terus dibawa oleh diaspora Batak ke berbagai kota besar dan luar negeri melalui komunitas adat, pelatihan bahasa, serta pelestarian aksara Batak yang mulai diajarkan kembali kepada generasi muda.</p>
+
+                <p>Dengan memahami sejarah Batak Toba, kita tidak hanya melihat perjalanan leluhur secara geografis dan budaya, tetapi juga menyadari bahwa warisan ini terus tumbuh sebagai bagian dari identitas yang hidup dan berharga hingga hari ini.</p>
+            </div>
         </div>
     </section>
 
     <section class="gallery-section" id="gallerySection">
         <div class="gallery-container">
-            <img src="./ASSETS/download (12) 1.png" alt="Traditional Batak Toba Ceremony" class="gallery-image" id="gallery-img">
+            <img src="./ASSETS/carousel.png" alt="Traditional Batak Toba Ceremony" class="gallery-image" id="gallery-img">
             <button class="gallery-nav prev" onclick="changeImage(-1)">‹</button>
             <button class="gallery-nav next" onclick="changeImage(1)">›</button>
         </div>
@@ -543,19 +557,18 @@
     </section>
 
     <script>
-        // Gallery functionality with enhanced animations
+        // Gallery functionality
         const images = [
-            "./ASSETS/download (12) 1.png",
-            "./ASSETS/download (12) 1.png",
-            "./ASSETS/download (12) 1.png",
-            "./ASSETS/download (12) 1.png"
+            './ASSETS/carousel.png',
+            './ASSETS/carousel.png',
+            './ASSETS/carousel.png',
+            './ASSETS/carousel.png'
         ];
         
         let currentImageIndex = 0;
         const galleryImg = document.getElementById('gallery-img');
         const indicatorsContainer = document.getElementById('galleryIndicators');
 
-        // Create indicators
         function createIndicators() {
             images.forEach((_, index) => {
                 const indicator = document.createElement('div');
@@ -600,33 +613,16 @@
             }, 500);
         }
 
-        // Auto-slide gallery
-        function autoSlide() {
-            changeImage(1);
-        }
+        let autoSlideInterval = setInterval(() => changeImage(1), 5000);
 
-        let autoSlideInterval = setInterval(autoSlide, 5000);
-
-        // Pause auto-slide on hover
         const galleryContainer = document.querySelector('.gallery-container');
         galleryContainer.addEventListener('mouseenter', () => {
             clearInterval(autoSlideInterval);
         });
 
         galleryContainer.addEventListener('mouseleave', () => {
-            autoSlideInterval = setInterval(autoSlide, 5000);
+            autoSlideInterval = setInterval(() => changeImage(1), 5000);
         });
-
-        // Scroll animations
-        function isElementInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
 
         function isElementPartiallyInViewport(el) {
             const rect = el.getBoundingClientRect();
@@ -634,16 +630,10 @@
         }
 
         function animateOnScroll() {
-            // Content section
             const contentSection = document.getElementById('contentSection');
             if (isElementPartiallyInViewport(contentSection)) {
                 contentSection.classList.add('visible');
                 
-                // Animate section header
-                const sectionHeader = document.getElementById('sectionHeader');
-                sectionHeader.classList.add('animate');
-                
-                // Animate paragraphs with delay
                 const paragraphs = document.querySelectorAll('#contentText p');
                 paragraphs.forEach((p, index) => {
                     setTimeout(() => {
@@ -652,18 +642,15 @@
                 });
             }
 
-            // Gallery section
             const gallerySection = document.getElementById('gallerySection');
             if (isElementPartiallyInViewport(gallerySection)) {
                 gallerySection.classList.add('visible');
             }
 
-            // Music section
             const musicSection = document.getElementById('musicSection');
             if (isElementPartiallyInViewport(musicSection)) {
                 musicSection.classList.add('visible');
                 
-                // Animate music items with delay
                 const musicItems = document.querySelectorAll('.music-item');
                 musicItems.forEach((item, index) => {
                     setTimeout(() => {
@@ -673,7 +660,6 @@
             }
         }
 
-        // Scroll progress bar
         function updateScrollProgress() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -681,7 +667,6 @@
             document.getElementById('scrollProgress').style.width = scrollProgress + '%';
         }
 
-        // Floating particles
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
             
@@ -693,7 +678,6 @@
                 particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
                 particlesContainer.appendChild(particle);
 
-                // Remove particle after animation
                 setTimeout(() => {
                     if (particle.parentNode) {
                         particle.parentNode.removeChild(particle);
@@ -701,11 +685,9 @@
                 }, 6000);
             }
 
-            // Create particles periodically
             setInterval(createParticle, 300);
         }
 
-        // Keyboard navigation for gallery
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') {
                 changeImage(-1);
@@ -714,7 +696,6 @@
             }
         });
 
-        // Touch/swipe support for gallery
         let touchStartX = 0;
         let touchEndX = 0;
 
@@ -733,27 +714,24 @@
             
             if (Math.abs(diff) > swipeThreshold) {
                 if (diff > 0) {
-                    changeImage(1); // Swipe left, next image
+                    changeImage(1);
                 } else {
-                    changeImage(-1); // Swipe right, previous image
+                    changeImage(-1);
                 }
             }
         }
 
-        // Initialize everything when page loads
         window.addEventListener('load', () => {
             createIndicators();
             createParticles();
             animateOnScroll();
         });
 
-        // Event listeners
         window.addEventListener('scroll', () => {
             animateOnScroll();
             updateScrollProgress();
         });
 
-        // Smooth reveal animation for elements
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -767,7 +745,6 @@
             });
         }, observerOptions);
 
-        // Observe all sections
         document.querySelectorAll('section').forEach(section => {
             observer.observe(section);
         });
