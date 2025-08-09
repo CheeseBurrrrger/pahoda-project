@@ -16,7 +16,9 @@
 .pahoda-title {
 	position: relative;
 	display: inline-block; /* supaya garisnya menyesuaikan lebar teks */
-	padding-bottom: 10px; /* jarak teks ke garis */
+	padding-bottom: 20px; /* jarak teks ke garis */
+	font-family: 'DM Serif Text', serif;
+
 }
 
 .pahoda-title::after {
@@ -28,6 +30,10 @@
 	width: 200%; /* lebih panjang dari teks */
 	height: 1px;
 	background-color: white; /* warna garis */
+}
+
+.quicksand-text {
+    font-family: 'Quicksand', sans-serif;
 }
 
 /* card */
@@ -55,7 +61,7 @@
 
 .card.card-overlay .card-title {
 	font-size: 1.2rem;
-	font-weight: bold;
+	font-family: 'DM Serif Text', serif;
 }
 
 /* askara */
@@ -74,6 +80,8 @@
 	position: relative;
 	display: inline-block; /* supaya garisnya menyesuaikan lebar teks */
 	padding-bottom: 10px; /* jarak teks ke garis */
+	font-family: 'DM Serif Text', serif;
+
 }
 
 .ques::after {
@@ -161,6 +169,11 @@
 	}
 }
 
+.galeri-title {
+    font-family: 'DM Serif display', serif;
+	font-size: 3rem;
+}
+
 .galeri-section .carousel-control-prev,
 .galeri-section .carousel-control-next {
 	width: 40px; /* ukuran tombol */
@@ -210,6 +223,25 @@
 	border: 2px solid #611919;
 }
 
+.ornamen-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ornamen-line {
+    flex: 1;
+    height: 2px;
+    background-color: #800000; /* Merah marun */
+    border: none;
+}
+
+.ornamen-img {
+    height: 75px; /* Atur sesuai gambar ornamen */
+}
+
+
 /* teka-teki */
 .badge-batak {
 	background-color: #800000;
@@ -227,3 +259,11 @@
 	background-color: #a52a2a;
 	/* maroon lebih terang saat hover */
 }
+
+a.badge-batak {
+        text-decoration: none;
+        color: white; /* mengikuti warna teks */
+    }
+    a.badge-batak:hover {
+        opacity: 0.8; /* efek hover tanpa garis bawah */
+    }

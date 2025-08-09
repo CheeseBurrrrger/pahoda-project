@@ -76,14 +76,15 @@ body {
 }
 
 .brand-text {
-	font-size: 12px;
+	font-size: 20px;
 	color: white;
+	font-family: 'DM Serif Text', serif;
 }
 
 .navbar-nav .nav-link {
 	color: white;
 	font-size: 18px;
-	font-family: var(--font-quicksand);
+	font-family: 'DM Serif Text', serif;
 	font-weight: 500;
 	cursor: pointer;
 	text-decoration: none;
@@ -104,6 +105,7 @@ body {
 .my-navbar .nav-link.show {
 	color: white !important;
 }
+
 
 .hero-content {
 	position: absolute;
@@ -213,3 +215,4 @@ body {
 	margin-top: 3px;
 	font-size: 14px;
 }
+
