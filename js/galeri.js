@@ -63,91 +63,91 @@ const galleryData = [
         title: "Nurung Kerah",
         description: "Nurung Kerah adalah makanan khas Batak Karo berupa ikan asap yang dimasak dengan bumbu tradisional, dipadukan dengan parutan kelapa dan bunga honje yang memberi aroma serta cita rasa khas.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/nunung_kerah.jpg"
     },
     {
         title: "Berastagi",
         description: "Berastagi merupakan kota sejuk di Sumatera Utara yang terkenal dengan panorama pegunungan, hasil bumi segar, dan pesona budaya Karo yang kental.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/berastagi.jpg"
     },
     {
-        title: "Topingtoping",
+        title: "Toping toping",
         description: "Tarian tradisional masyarakat Simalungun pada acara dukacita dengan diiringi nyanyian khas yang disebut andungangungan.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/toping_toping.jpg"
     },
     {
         title: "Dayok Nabinatur",
         description: "hidangan khas Simalungun berupa ayam utuh yang dimasak dan disusun secara rapi, melambangkan doa, restu, dan harapan baik bagi penerimanya dalam acara adat atau perayaan penting.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/dayok.jpg"
     },
     {
         title: "Simalungun Tempo Dulu",
         description: "Suasana masyarakat Simalungun menjajakan hasil tenun di pasar pada masa lampau.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/pasar_simalungun.jpg"
     },
     {
         title: "Tortor Sombah",
         description: "Tortor Sombah adalah tarian adat Simalungun yang dibawakan sebagai bentuk penghormatan kepada tamu atau tokoh terhormat, dengan gerakan anggun yang mencerminkan kesopanan dan keramahan masyarakat Simalungun.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/tortor_sombah.jpeg"
     },
     {
         title: "Ulos Simalungun",
         description: "Pakaian khas masyarakat Simalungun dengan motif dan warna tradisional, mencerminkan identitas budaya yang anggun sekaligus menjadi simbol kebanggaan akan warisan leluhur.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/ulos_simalungun.jpg"
     },
     {
         title: "Tatak Merjuma",
         description: "Tari Tatak Merjuma dari Pakpak Bharat yang menggambarkan semangat gotong royong masyarakat saat mengolah lahan pascapanen, dengan gerakan dinamis yang mencerminkan kekompakan dan rasa syukur.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/taktak_merjuna.jpg"
     },
     {
         title: "Pelleng",
         description: "Pelleng adalah makanan khas Pakpak Bharat berupa bubur nasi yang dimasak dengan bumbu rempah khas, disajikan dalam upacara adat sebagai simbol semangat, kekuatan, dan doa agar terhindar dari marabahaya.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/pelleng_pakpak.jpg"
     },
      {
         title: "Oang Oang Pakpak Bharat",
         description: "Pesta Budaya Oang-Oang adalah perayaan adat Pakpak Bharat yang menampilkan tarian, musik, dan prosesi tradisional sebagai ungkapan syukur, pelestarian warisan leluhur, serta sarana mempererat persaudaraan masyarakat.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/oang_pakpak.jpg"
     },
      {
         title: "Tatak Garo garo",
         description: "Tari Tatak Garo-Garo adalah tarian tradisional Pakpak Bharat yang melambangkan kegembiraan dan rasa syukur, ditarikan dengan gerakan lincah dan ekspresif diiringi musik gendang khas pada acara adat dan perayaan budaya.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/tatak_garo.jpg"
     },
      {
         title: "Tortor Onang Onang",
         description: "Tortor Onang-Onang adalah tarian tradisional Batak Mandailing yang dibawakan untuk mengungkapkan rasa syukur dan sukacita, biasanya diiringi nyanyian onang-onang yang berisi doa, nasihat, dan pujian dalam acara adat.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/tortor_onang.webp"
     },
      {
         title: "Rondang Bulan",
         description: "Tarian masyarakat Mandailing yang digelar pada malam purnama, diiringi, musik gondang, dan berbagai tradisi sebagai wujud syukur sekaligus ajang mempererat persaudaraan.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/rondang_bulan.jpg"
     },
      {
         title: "Ikan sale",
         description: "Ikan Sale Mandailing adalah olahan ikan yang diawetkan dengan cara diasap, kemudian dimasak dengan bumbu khas Mandailing yang kaya rempah, menghasilkan cita rasa gurih dan aroma asap yang khas.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/ikan_sale.jpg"
     },
      {
         title: "Bagas Gondang",
         description: "Rumah adat Mandailing yang menjadi pusat pelaksanaan upacara adat dan kegiatan budaya, dengan arsitektur khas yang mencerminkan status sosial serta nilai-nilai kehidupan masyarakat Mandailing.",
         size: "small",
-        image: "./ASSETS/img/a.jpg"
+        image: "./ASSETS/img/bagas_gondang.jpg"
     },    
 ];
 
