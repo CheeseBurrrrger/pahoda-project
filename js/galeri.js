@@ -1,63 +1,87 @@
 const galleryData = [
     {
-        title: "Judul 1",
-        description: "Masyarakat Karo tempo dulu dengan busana yang mencerminkan keharmonisan pasangan suami istri. Potret ini merekam kehidupan tradisional yang erat dengan budaya kearifan lokal.",
-        size: "large",
-        image: "./ASSETS/img/aksara_pakpak.jpg"
+        title: "Tor-Tor Sipitu Cawan",
+        description: "Tor-Tor Sipitu Cawan merupakan tarian sakral Batak Toba yang dibawakan tujuh penari wanita sambil menyeimbangkan cawan berisi air jeruk purut sebagai simbol penyucian dalam upacara adat penting.",
+        size: "small",
+        image: "./ASSETS/img/tor_tor.jpg"
     },
     {
-        title: "Judul 2",
-        description: "Tari Manortor adat Batak Toba yang ditarikan dalam berbagai pesta kebudayaan seperti pernikahan dan pemakaman. Gerakannya sarat makna, menjadi wujud penghormatan kepada leluhur sekaligus mempererat ikatan kekeluargaan dalam masyarakat.",
-        size: "medium",
-        image: "./ASSETS/img/batak dancer.jpg"
-    },
-    {
-        title: "Judul 3",
+        title: "Rumah Bolon",
         description: "Deretan rumah adat Batak Toba atau Rumah Bolon di Desa Buhit, Pulau Samosir. Arsitekturnya yang unik dengan atap menjulang melambangkan status sosial dan filosofi hidup masyarakat Batak, menjadi warisan budaya yang terus dijaga hingga kini.",
         size: "small",
         image: "./ASSETS/img/cover.jpg"
     },
     {
-        title: "Penari Tradisional",
-        description: "Tari Manortor adat Batak Toba yang ditarikan dalam berbagai pesta kebudayaan seperti pernikahan dan pemakaman. Gerakannya sarat makna, menjadi wujud penghormatan kepada leluhur sekaligus mempererat ikatan kekeluargaan dalam masyarakat.",
-        size: "medium",
-        image: "./ASSETS/img/batak dancer.jpg"
+        title: "Danau Toba",
+        description: "Danau Toba terletak di Sumatera Utara, yang tidak hanya memukau dengan keindahan alamnya, tetapi juga menyimpan sejarah geologi dan budaya mendalam bagi masyarakat Batak Toba.",
+        size: "small",
+        image: "./ASSETS/img/danau_toba.jpg"
     },
     {
-        title: "Penari Tradisional",
-        description: "Tari Manortor adat Batak Toba yang ditarikan dalam berbagai pesta kebudayaan seperti pernikahan dan pemakaman. Gerakannya sarat makna, menjadi wujud penghormatan kepada leluhur sekaligus mempererat ikatan kekeluargaan dalam masyarakat.",
-        size: "medium",
-        image: "./ASSETS/img/batak dancer.jpg"
+        title: "Gorga ",
+        description: "Gorga batak toba merupakan seni ukiran tradisional dengan morif khas berwarna merah, hitam, dan putih yang sarat makna filosofi tentang hubungan manusia denga alam, leluhur, dan Sang Pencipta.",
+        size: "small",
+        image: "./ASSETS/img/gorga_karo.jpg"
     },
     {
-        title: "Penari Tradisional",
-        description: "Tari Manortor adat Batak Toba yang ditarikan dalam berbagai pesta kebudayaan seperti pernikahan dan pemakaman. Gerakannya sarat makna, menjadi wujud penghormatan kepada leluhur sekaligus mempererat ikatan kekeluargaan dalam masyarakat.",
-        size: "medium",
-        image: "./ASSETS/img/batak dancer.jpg"
+        title: "Masyarakat Batak Toba",
+        description: "Masyarakat Batak Toba yang mengenakan pakaian adat khas, lengkap dengan ulos dan penutup kepala tradisional sebagai simbol identitas budaya dengan makna yang mendalam.",
+        size: "small",
+        image: "./ASSETS/img/masyarakat_toba.jpg"
     },
     {
-        title: "Penari Tradisional",
-        description: "Tari Manortor adat Batak Toba yang ditarikan dalam berbagai pesta kebudayaan seperti pernikahan dan pemakaman. Gerakannya sarat makna, menjadi wujud penghormatan kepada leluhur sekaligus mempererat ikatan kekeluargaan dalam masyarakat.",
-        size: "medium",
-        image: "./ASSETS/img/batak dancer.jpg"
+        title: "Mie Gomak",
+        description: "Spaghetti Batak alias Mie Gomak yang disajikan dengan kuah santan berbumbu andaliman dan rempah khas Sumatera utara.",
+        size: "small",
+        image: "./ASSETS/img/mie_gomak.jpg"
     },
     {
-        title: "Penari Tradisional",
-        description: "Tari Manortor adat Batak Toba yang ditarikan dalam berbagai pesta kebudayaan seperti pernikahan dan pemakaman. Gerakannya sarat makna, menjadi wujud penghormatan kepada leluhur sekaligus mempererat ikatan kekeluargaan dalam masyarakat.",
-        size: "medium",
-        image: "./ASSETS/img/batak dancer.jpg"
+        title: "Karo Tempo Dulu",
+        description: "Masyarakat Karo tempo dulu dengan busana yang mencerminkan keharmonisan pasangan suami istri. Potret ini merekam kehidupan tradisional yang erat dengan budaya kearifan lokal.",
+        size: "small",
+        image: "./ASSETS/img/aksara_pakpak.jpg"
     },
     {
-        title: "Penari Tradisional",
-        description: "Tari Manortor adat Batak Toba yang ditarikan dalam berbagai pesta kebudayaan seperti pernikahan dan pemakaman. Gerakannya sarat makna, menjadi wujud penghormatan kepada leluhur sekaligus mempererat ikatan kekeluargaan dalam masyarakat.",
-        size: "medium",
-        image: "./ASSETS/img/batak dancer.jpg"
+        title: "Siwaluh Jabu",
+        description: "Siwaluh Jabu yang artinya rumah delapan keluarga, bukan hanya sekadar tempat tinggal masyarakat tradisional Karo, tetapi juga ruang spiritual tempat tinggal roh leluhur dan simbol ikatan yang kuat antar keluarga. Ciri khas atapnya yang unik, desain tanpa paku, dan dinding yang tegak lurus dengan kemiringan sekitar 120 derajat.",
+        size: "small",
+        image: "./ASSETS/img/silawuh_jabu.webp"
     },
     {
-        title: "Penari Tradisional",
-        description: "Tari Manortor adat Batak Toba yang ditarikan dalam berbagai pesta kebudayaan seperti pernikahan dan pemakaman. Gerakannya sarat makna, menjadi wujud penghormatan kepada leluhur sekaligus mempererat ikatan kekeluargaan dalam masyarakat.",
-        size: "medium",
-        image: "./ASSETS/img/batak dancer.jpg"
+        title: "Piso Surit",
+        description: "Piso Surit merupakan tarian tradisional Batak Karo yang menggambarkan gadis menanti kekasihnya dan biasa dipentaskan untuk menyambut tamu kehormatan.",
+        size: "small",
+        image: "./ASSETS/img/tari_piso.jpg"
+    },
+    {
+        title: "Gundala Seberaya",
+        description: "Gundala atau dikenal juga Tembut-Tembut Seberaya adalah tarian ritual Batak Karo yang dilakukan untuk memanggil hujan saat kemarau panjang dengan iringan musik gendang, sarunai, serta gung, disertai lagu-lagu seperti persentabin.",
+        size: "small",
+        image: "./ASSETS/img/gundala.jpg"
+    },
+    {
+        title: "Nurung Kerah",
+        description: ".",
+        size: "small",
+        image: "./ASSETS/img/a.jpg"
+    },
+    {
+        title: "a",
+        description: ".",
+        size: "small",
+        image: "./ASSETS/img/a.jpg"
+    },
+    {
+        title: "a",
+        description: ".",
+        size: "small",
+        image: "./ASSETS/img/a.jpg"
+    },
+    {
+        title: "a",
+        description: ".",
+        size: "small",
+        image: "./ASSETS/img/a.jpg"
     },
     
     // ... add `image` property for all items
