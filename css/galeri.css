@@ -158,7 +158,7 @@
 }
 
 .no-scroll-navbar .my-navbar.scrolled {
-    background-color: transparent !important;
+    background-color: #611919 !important;
     backdrop-filter: none !important;
     box-shadow: none !important;
 }
