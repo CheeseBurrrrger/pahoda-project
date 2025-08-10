@@ -138,48 +138,17 @@ const galleryData = [
         image: "./ASSETS/img/a.jpg"
     },
      {
-        title: "a",
-        description: ".",
+        title: "Ikan sale",
+        description: "Ikan Sale Mandailing adalah olahan ikan yang diawetkan dengan cara diasap, kemudian dimasak dengan bumbu khas Mandailing yang kaya rempah, menghasilkan cita rasa gurih dan aroma asap yang khas.",
         size: "small",
         image: "./ASSETS/img/a.jpg"
     },
      {
-        title: "a",
-        description: ".",
+        title: "Bagas Gondang",
+        description: "Rumah adat Mandailing yang menjadi pusat pelaksanaan upacara adat dan kegiatan budaya, dengan arsitektur khas yang mencerminkan status sosial serta nilai-nilai kehidupan masyarakat Mandailing.",
         size: "small",
         image: "./ASSETS/img/a.jpg"
-    },
-     {
-        title: "a",
-        description: ".",
-        size: "small",
-        image: "./ASSETS/img/a.jpg"
-    },
-     {
-        title: "a",
-        description: ".",
-        size: "small",
-        image: "./ASSETS/img/a.jpg"
-    },
-     {
-        title: "a",
-        description: ".",
-        size: "small",
-        image: "./ASSETS/img/a.jpg"
-    },
-     {
-        title: "a",
-        description: ".",
-        size: "small",
-        image: "./ASSETS/img/a.jpg"
-    },
-     {
-        title: "a",
-        description: ".",
-        size: "small",
-        image: "./ASSETS/img/a.jpg"
-    },
-    
+    },    
 ];
 
 class PinterestCollage {
