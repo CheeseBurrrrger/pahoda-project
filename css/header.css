@@ -152,67 +152,69 @@ body {
 }
 
 /* FOOTER SECTION */
-.footer {
-	background: linear-gradient(to bottom, #ffffff 0%, #000000 15%);
-	padding: 40px 0;
-}
+  footer {
+      background: linear-gradient(to bottom, #ffffff 0%, #000000 15%);
+      color: white;
+      font-family: 'Quicksand', sans-serif;
+      padding: 40px 0 10px;
+    }
 
-.footer-container {
-	/* display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1000px; */
-	margin: auto;
-	padding: 50px 0;
-	color: white;
-}
+    .footer-logo img {
+      max-width: 130px;
+	  width: 100%;
+    }
 
-.footer-left {
-	text-align: left;
-}
+    .footer-logo h4 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      letter-spacing: 5px;
+      font-weight: bold;
+    }
 
-.footer-title {
-	font-size: 90px;
-	font-family: "Times New Roman", serif;
-	font-weight: bold;
-	letter-spacing: 8px;
-	margin: 0 0 10px;
-}
+    .footer-logo p {
+      margin: 5px 0 0;
+      font-size: 14px;
+    }
 
-.footer-contact {
-	font-size: 12px;
-	font-family: Arial, sans-serif;
-}
+    footer h5 {
+      font-weight: bold;
+      font-size: 16px;
+    }
 
-.footer-middle {
-	display: flex;
-	flex-direction: column;
-	/* gap: 10px; */
-}
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-.footer-middle a {
-	color: white;
-	text-decoration: none;
-	font-family: var(--font-serif-text), sans-serif;
-}
+    footer ul li {
+      margin-bottom: 6px;
+    }
 
-.footer-middle a:hover {
-	text-decoration: underline;
-}
+    footer ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
+    }
 
-.footer-right {
-	text-align: center;
-}
+    footer ul li a:hover {
+      color: #ddd;
+    }
 
-.footer-right img {
-	max-width: 100px;
-	width: 100%;
-	display: block;
-	margin: auto;
-}
+    .footer-bottom {
+      border-top: 1px solid #fff;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-size: 14px;
+    }
 
-.footer-right p {
-	margin-top: 3px;
-	font-size: 14px;
-}
+    .footer-icons a {
+      color: white;
+      font-size: 20px;
+      margin-left: 15px;
+      transition: 0.3s;
+    }
 
+    .footer-icons a:hover {
+      color: #ccc;
+    }

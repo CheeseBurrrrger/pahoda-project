@@ -1,0 +1,191 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    font-family: 'Quicksand', sans-serif; /* kalau mau di seluruh halaman */
+}
+
+body::before {
+    content: "";
+    position: absolute; /* biar ikut scroll */
+    inset: 0; /* sama dengan top:0; right:0; bottom:0; left:0 */
+    background-image: url("/assets/img/3.jpg");
+    background-repeat: repeat; /* pola nyambung */
+    background-size: auto; /* bisa diganti 'cover' kalau mau penuh */
+    opacity: 0.1; /* transparan tipis */
+    z-index: -1; /* di belakang semua elemen */
+    pointer-events: none; /* biar gak ganggu klik */
+}
+
+.repositori-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+.repositori-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.repositori-images img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.repositori-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.repositori-overlay h2 {
+  color: white;
+  font-size: 3rem;
+  font-family: 'DM serif display';
+}
+
+/* nabar khusus */
+/* Navbar khusus warna cokelat */
+.navbar-coklat .brand-text {
+  color: #4F1212 !important;
+}
+
+.navbar-coklat .nav-link {
+  color:#4F1212!important;
+}
+
+
+.navbar-coklat .nav-link:hover {
+  opacity: 0.8;
+}
+
+/* REFERENSI */
+
+ .referensi-section {
+      font-family: 'Quicksand', sans-serif; /* hanya untuk section ini */
+      background: url('motif-batak.png') center/cover no-repeat; /* ganti dengan path gambar background */
+      background-attachment: fixed;
+    }
+
+    .referensi-section h5 {
+      font-weight: 700;
+      color: #900B09;
+    }
+
+    .referensi-section ul li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+      color: #4F1212;
+    }
+
+    .referensi-section a {
+      color: #4F1212;
+      text-decoration: none;
+    }
+
+    .referensi-section a:hover {
+      text-decoration: underline;
+    }
+
+    /* TIM */
+    .team-section {
+        position: relative;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .team-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("/assets/img/motif.jpg"); /* ganti dengan path motif */
+        background-repeat: repeat;
+        background-size: auto;
+        opacity: 0.15; /* agar tidak terlalu transparan */
+        z-index: -1;
+    }
+
+    /* Dekorasi header */
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 500;
+        position: relative;
+        margin-bottom: 40px;
+        font-family: 'dm serif display';
+    }
+
+    .section-decor {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .section-decor::before,
+    .section-decor::after {
+        content: "";
+        flex: 1;
+        height: 2px;
+        background-color: #a00;
+    }
+
+    .decor-icon {
+        font-size: 2rem;
+        color: #a00;
+    }
+
+    /* Card tim */
+    .team-card {
+        background: transparent;
+        border: none;
+    }
+
+    .team-name {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        color: #800;
+    }
+
+    .team-role {
+        font-style: italic;
+        color: #555;
+        font-size: 0.9rem;
+    }
+
+    .social-icons i {
+        font-size: 1.2rem;
+        color: gray;
+        margin: 0 5px;
+        transition: color 0.3s;
+    }
+
+    .social-icons i:hover {
+        color: #a00;
+    }
+
+    .ornamen-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+
+.ornamen-line {
+    flex: 1;
+    height: 2px;
+    background-color: #800000; /* Merah marun */
+    border: none;
+}
+
+.ornamen-img {
+    height: 75px; /* Atur sesuai gambar ornamen */
+}

@@ -158,11 +158,26 @@
 }
 
 .no-scroll-navbar .my-navbar.scrolled {
-    background-color: #611919 !important;
+    background-color: transparent !important;
     backdrop-filter: none !important;
     box-shadow: none !important;
 }
 
 .no-scroll-navbar .my-navbar.scrolled .nav-link {
     color: #611919 !important;
+}
+
+/* nabar khusus */
+/* Navbar khusus warna cokelat */
+.navbar-coklat .brand-text {
+  color: #4F1212 !important;
+}
+
+.navbar-coklat .nav-link {
+  color:#4F1212!important;
+}
+
+
+.navbar-coklat .nav-link:hover {
+  opacity: 0.8;
 }
