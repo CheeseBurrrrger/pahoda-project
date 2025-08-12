@@ -39,13 +39,13 @@ const galleryData = [
         title: "Karo Tempo Dulu",
         description: "Masyarakat Karo tempo dulu dengan busana yang mencerminkan keharmonisan pasangan suami istri. Potret ini merekam kehidupan tradisional yang erat dengan budaya kearifan lokal.",
         size: "small",
-        image: "./ASSETS/img/aksara_pakpak.jpg"
+        image: "./ASSETS/img/aksara_pakpak.png"
     },
     {
         title: "Siwaluh Jabu",
         description: "Siwaluh Jabu yang artinya rumah delapan keluarga, bukan hanya sekadar tempat tinggal masyarakat tradisional Karo, tetapi juga ruang spiritual tempat tinggal roh leluhur dan simbol ikatan yang kuat antar keluarga. Ciri khas atapnya yang unik, desain tanpa paku, dan dinding yang tegak lurus dengan kemiringan sekitar 120 derajat.",
         size: "small",
-        image: "./ASSETS/img/silawuh_jabu.webp"
+        image: "./ASSETS/img/siwaluh_jabu.webp"
     },
     {
         title: "Piso Surit",
@@ -63,7 +63,7 @@ const galleryData = [
         title: "Nurung Kerah",
         description: "Nurung Kerah adalah makanan khas Batak Karo berupa ikan asap yang dimasak dengan bumbu tradisional, dipadukan dengan parutan kelapa dan bunga honje yang memberi aroma serta cita rasa khas.",
         size: "small",
-        image: "./ASSETS/img/nunung_kerah.jpg"
+        image: "./ASSETS/img/nurung_kerah.jpg"
     },
     {
         title: "Berastagi",
@@ -135,7 +135,7 @@ const galleryData = [
         title: "Rondang Bulan",
         description: "Tarian masyarakat Mandailing yang digelar pada malam purnama, diiringi, musik gondang, dan berbagai tradisi sebagai wujud syukur sekaligus ajang mempererat persaudaraan.",
         size: "small",
-        image: "./ASSETS/img/rondang_bulan.jpg"
+        image: "./ASSETS/img/rondang_bulan.webp"
     },
      {
         title: "Ikan sale",
